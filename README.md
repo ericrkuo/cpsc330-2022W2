@@ -14,7 +14,7 @@ Instructors: Giulia Toti (201), Mathias Lecuyer (202), Amir Abdi (203)
 ## Important links
 
 * [Course GitHub page](https://github.com/UBC-CS/cpsc330-2022W2)
-* [Course Jupyter book](https://ubc-cs.github.io/cpsc330/README.html)
+* [Course Jupyter book](https://ubc-cs.github.io/cpsc330/README.html). **Important:** this is a static version of the lecture notebooks developed by a previous instructor of the course. It can be used as reference for the content, but not for anything related to the particular course instance (due dates, setup steps, etc.)
 * [Course videos YouTube channel](https://www.youtube.com/playlist?list=PLHofvQE1VlGtZoAULxcHb7lOsMved0CuM)
 * [Canvas link](https://canvas.ubc.ca/courses/106375)
 * [Syllabus / administrative info](docs/course_info.md)
@@ -33,13 +33,20 @@ Usually the homework assignments will be due on Mondays and will be released on 
 | hw3 | Feb 1, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 4% | 
 | hw4 | Feb 10, 11:59pm  |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 4% |
 | **Midterm** | Feb 15 **Wednesday** | TBD | TBD | 19 % |
-| hw5 | Feb 27, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 5% | 
-| hw6 | Mar 13, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 4% | 
-| hw7 | Mar 20, 11:59pm  |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 4% |  
-| hw8 | TBD, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)|  3% |
-| **Final exam** | TBD | TBD | TBD | 50% |
+| hw5 | March 1, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 4% | 
+| hw6 | Mar 15, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 5% | 
+| hw7 | Mar 22, 11:59pm  |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)| 4% |  
+| hw8 | April 12, 11:59pm |   [Github repo](https://github.com/UBC-CS/cpsc330-2022W2/tree/main/hw) | [Gradescope](https://www.gradescope.ca/courses/9483)|  3% |
+| **Final exam** | Apr 20, 7:00pm | TBD | TBD | 50% |
 
+## CPSC 330 Final Exam 
+As per UBC Schedule, the final exam will be on Thursday, April 20th, from 7:00pm to 10pm (exam length TBD). No remote options allowed.    Students will attend to the exam location based on the lecture section and last name.
+![image](https://user-images.githubusercontent.com/112001349/226438563-3e54969b-4d78-4ca6-8c50-56b08a479606.png)
 
+Students who require special accommodations must register with CFA and take the exam at their facilities. Remember that CFA requires you to do so at least 1 week prior to UBC's final exam period. If you fail to register with CFA and can not take the exam with them, we will not be able to provide alternative accommodations and you will have to take the exam with the rest of the class. 
+
+If you believe that you will be experiencing an exam hardship, exam clash or any religious observations, please fill out this survey by Friday, March 31 @ 11:59 p.m. PT to request to take the final exam at an alternate time (TBD): https://ubc.ca1.qualtrics.com/jfe/form/SV_5yY8sjQatMZ0XlQ .
+More exam info to come.
 
 ## Lecture schedule (tentative)
 
@@ -84,9 +91,9 @@ Lectures will be on Tuesday and Thursday. Exact time and location change accordi
 | Mar 7 |   Feature engineering and feature selection | None                                                                                                                                                                                                                                                                                                | less depth |
 |  | **Part II: Unsupervised learning, transfer learning, different learning settings**  |                                                                                                                                                                                                                                                                                                     | 
 | Mar 9 |   Clustering | 📹 <li>Pre-watch: [14.1](https://youtu.be/caAuUAXwpb8),[14.2](https://youtu.be/s6AvSZ1_l7I),[14.3](https://youtu.be/M5ilrhcL0oY)</li>                                                                                                                                                               | less depth |
-| Mar 14 |   More clustering | None                                                                                                                                                                                                                                                                                                | less depth |
+| Mar 14 |   More clustering | <li> Post-lecture: [15.1](https://youtu.be/1ZwITQyWpkY), [15.2](https://youtu.be/T4NLsrUaRtg), [15.3](https://youtu.be/NM8lFKFZ2IU), [201 lecture recording](https://ubc.zoom.us/rec/share/w5u5E2wogGUTcwYvRbHd-TH7ix4WwY1JXrlvd7WvqD6ERjg7eYOApKcvsn0uZkom.QVa__I6MgP-d4ji_?startTime=1678844657000)</li>                                                                                                                                                                                                                                                                                               | less depth |
 |        |  | **Week 9 datasets**: <li>[Jester 1.7M jokes ratings dataset](https://www.kaggle.com/vikashrajluhaniwal/jester-17m-jokes-ratings-dataset)</li>                                                                                                                                                       |
-| Mar 16 |   Simple recommender systems | <li> Post-lecture: [15.1](https://youtu.be/1ZwITQyWpkY), [15.2](https://youtu.be/T4NLsrUaRtg), [15.3](https://youtu.be/NM8lFKFZ2IU)</li>                                                                                                                                                            | less depth ||
+| Mar 16 |   Simple recommender systems |      None                                                                                                                                                       | less depth ||
 | Mar 21 |  Text data, embeddings, topic modeling  | 📹 <li>Pre-watch: [16.1](https://youtu.be/GTC_iLPCjdY),[16.2](https://youtu.be/7W5Q8gzNPBc)</li>                                                                                                                                                                                                    |   new |
 | Mar 23 | Neural networks and computer vision |                                                                                                                                                                                                                                                                                                     |   less depth |
 | Mar 28 | Time series data | (Optional) [Humour: The Problem with Time & Timezones](https://www.youtube.com/watch?v=-5wpm-gesOY)                                                                                                                                                                                                 | new |

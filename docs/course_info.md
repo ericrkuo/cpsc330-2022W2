@@ -2,6 +2,21 @@
 
 [UBC course URL](https://www.cs.ubc.ca/course-section/cpsc-330-201-2021w)
 
+## Important information regarding the CPSC 330 Final Exam
+As per [UBC Schedule](https://students.ubc.ca/enrolment/exams/exam-schedule), the final exam will be on Thursday, April 20th, from 7:00pm to 10pm  (exam length TBD). No remote options allowed. 
+ 
+Students will attend to the exam location based on the lecture section and last name:
+<img width="739" alt="image" src="https://user-images.githubusercontent.com/112001349/226437261-6fd1e8cf-9291-45f4-a792-f66fe0fc7ef0.png">
+
+ 
+Students who require special accommodations must register with CFA and take the exam at their facilities. Remember that CFA requires you to do so at least 1 week prior to UBC's final exam period. If you fail to register with CFA and can not take the exam with them, we will not be able to provide alternative accommodations and you will have to take the exam with the rest of the class.
+
+If you believe that you will be experiencing an exam hardship, exam clash or any religious observations, please fill out this survey by Friday, March 31 @ 11:59 p.m. PT to request to take the final exam at an alternate time (TBD): https://ubc.ca1.qualtrics.com/jfe/form/SV_5yY8sjQatMZ0XlQ .
+
+_More exam info to come_
+
+
+
 ## Course description
 
 Application of machine learning tools, with an emphasis on solving practical problems. Data cleaning, feature extraction, supervised and unsupervised machine learning, reproducible workflows, and communicating results.
@@ -34,7 +49,7 @@ The tutorials for this class will be run by the TAs and will be in the office ho
 **Office hours**: 
 - Giulia Toti, Monday 10:00-11:30, ICICS 231
 - Mathias Lecuyer, Wednesday 9:30-11:00, ICICS 317
-- Amir Abdi, Monday, 5-6 PM, Virtual on [in this Zoom room](https://ubc.zoom.us/j/61799013213?pwd=SjBIbVlBRDNwYktQbElJMm5ybFVKQT09)
+- Amir Abdi, Monday, 5-6 PM, Virtual on Zoom (Link is available [here](https://canvas.ubc.ca/courses/106375/users/191703))
 
 
 ## Teaching Team
@@ -62,7 +77,7 @@ The teaching team can (must) be contacted through Piazza. All info about how to 
 **Course Coordinator**:
 - Michelle Pang
 
-The Course Coordinator can be contacted through email at cpsc330-admin@cs.ubc.ca. 
+The Course Coordinator can be contacted through email at cpsc330-admin@cs.ubc.ca. Please note that the Course Coordinator's work hours are 8:30 AM-4:30 PM Monday to Friday. They do not respond to emails outside of their work hours and their response time varies, especially during extra busy times (e.g., before the add/drop deadline). In general, you can expect a response in 3-5 business days.
 
 ## Registration
 
@@ -90,7 +105,7 @@ The grading scheme for the course is as follows:
 
 **A score of at least 50% in the Final Exam is required to pass the course.**
 
-Assignments will contribute equally towards the overall Assignments grade. This may change only in case the last assignment ends up particularly short or long due to timing, in which case the weight will be changed accordingly. Furthermore, I will drop your lowest homework grade. 
+Assignments weights are listed on the main page of the repository, together with their deadlines. Furthermore, we will drop your lowest homework grade. 
 
 For the full policy on grades, see [this document](grades.md).
 
@@ -106,9 +121,10 @@ The midterm exam will take place on **February 15, 2023** at 7PM. Note that this
 
 **Missed midterm exam**. There is no makeup midterm exam. If you miss the midterm exam, or anticipate missing the midterm exam, please see the Academic concessions section above. In most cases, if you have missed the midterm exam for a justified reason, the weight of the midterm component of the course will be transferred to the final exam.
 
+
 ## Final exam
 
-The final exam will be held during the exam period (TBD). **Do not book flights/trips before you are sure they do not conflict with the date of the final**.
+The final exam will be held on Thursday, April 20th 2023 at 7 pm (Location: TBD). **Do not book flights/trips before you are sure they do not conflict with the date of the final**.
 
 ## Code of conduct
 

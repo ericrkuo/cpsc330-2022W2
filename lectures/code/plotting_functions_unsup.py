@@ -258,6 +258,46 @@ def plot_dbscan_with_labels(X, eps=1.0, min_samples=2, font_size=14):
     for i, txt in enumerate(labels):
         plt.annotate(txt, X[i], xytext=X[i] + 0.2, size=font_size)
 
+def print_dbscan_noise_images(X_people, y_people, dbscan, labels, image_shape=(87, 65)):
+    noise = X_people[labels == -1]
+
+    fig, axes = plt.subplots(
+        2, 9, subplot_kw={"xticks": (), "yticks": ()}, figsize=(12, 4)
+    )
+    for image, ax in zip(noise, axes.ravel()):
+        ax.imshow(image.reshape(image_shape), vmin=0, vmax=1)
+
+def print_hierarchical_clusters(X_people, y_people, target_names, cluster_labels, unique_cluster_labels=[2, 3, 6, 29, 30, 36, 38], image_shape=(87, 65)):
+    for cluster in unique_cluster_labels: # hand-picked "interesting" clusters
+        mask = cluster_labels == cluster
+        fig, axes = plt.subplots(
+            1, 15, subplot_kw={"xticks": (), "yticks": ()}, figsize=(15, 8)
+        )
+        cluster_size = np.sum(mask)
+        axes[0].set_ylabel("#{}: {}".format(cluster, cluster_size))
+        for image, label, asdf, ax in zip(
+            X_people[mask], y_people[mask], cluster_labels[mask], axes
+        ):
+            ax.imshow(image.reshape(image_shape), vmin=0, vmax=1)
+            ax.set_title(target_names[label].split()[-1], fontdict={"fontsize": 9})
+        for i in range(cluster_size, 15):
+            axes[i].set_visible(False)        
+    
+def print_dbscan_clusters(X_people, y_people, labels, image_shape=(87, 65)):
+    i = 0
+    for cluster in range(max(labels) + 1):
+        mask = labels == cluster
+        n_images = np.sum(mask)
+        fig, axes = plt.subplots(
+            1,
+            n_images,
+            figsize=(n_images * 1.5, 4),
+            subplot_kw={"xticks": (), "yticks": ()},
+        )
+        for image, label, ax in zip(X_people[mask], y_people[mask], axes):
+            ax.imshow(image.reshape(image_shape), vmin=0, vmax=1)
+            ax.set_title("cluster %d" % (i))
+        i += 1    
 
 def plot_X_k_means(X, k=2):
     fig, ax = plt.subplots(1, 2, figsize=(12, 4))
@@ -966,3 +1006,71 @@ def plot_first_assignment(data, centroids, dist, w, h):
     plt.ylabel(data.columns[1], fontdict={"fontsize": w})
 
     plt.title("First round of assignment - Step #1", fontdict={"fontsize": w + h})
+
+    
+def print_dbscan_noise_images(X_people, y_people, dbscan, labels, image_shape=(87, 65)):
+    noise = X_people[labels == -1]
+
+    fig, axes = plt.subplots(
+        2, 9, subplot_kw={"xticks": (), "yticks": ()}, figsize=(12, 4)
+    )
+    for image, ax in zip(noise, axes.ravel()):
+        ax.imshow(image.reshape(image_shape), vmin=0, vmax=1)
+    
+def print_dbscan_clusters(X_people, y_people, labels, image_shape=(87, 65)):
+    i = 0
+    for cluster in range(max(labels) + 1):
+        mask = labels == cluster
+        n_images = np.sum(mask)
+        fig, axes = plt.subplots(
+            1,
+            n_images,
+            figsize=(n_images * 1.5, 4),
+            subplot_kw={"xticks": (), "yticks": ()},
+        )
+        for image, label, ax in zip(X_people[mask], y_people[mask], axes):
+            ax.imshow(image.reshape(image_shape), vmin=0, vmax=1)
+            ax.set_title("cluster %d" % (i))
+        i += 1    
+        
+def print_hierarchical_clusters(X_people, y_people, target_names, cluster_labels, unique_cluster_labels=[2, 3, 6, 29, 30, 36, 38], image_shape=(87, 65)):
+    for cluster in unique_cluster_labels: # hand-picked "interesting" clusters
+        mask = cluster_labels == cluster
+        fig, axes = plt.subplots(
+            1, 15, subplot_kw={"xticks": (), "yticks": ()}, figsize=(15, 8)
+        )
+        cluster_size = np.sum(mask)
+        axes[0].set_ylabel("#{}: {}".format(cluster, cluster_size))
+        for image, label, asdf, ax in zip(
+            X_people[mask], y_people[mask], cluster_labels[mask], axes
+        ):
+            ax.imshow(image.reshape(image_shape), vmin=0, vmax=1)
+            ax.set_title(target_names[label].split()[-1], fontdict={"fontsize": 9})
+        for i in range(cluster_size, 15):
+            axes[i].set_visible(False)    
+            
+#[Code credit](https://learning.oreilly.com/library/view/introduction-to-machine/9781449369880/ch02.html#linear-models)
+def plot_multiclass_lr_ovr(lr, X_train, y_train, n_classes, test_points=None, decision_boundary=False):    
+    mglearn.discrete_scatter(X_train[:, 0], X_train[:, 1], y_train)
+    line = np.linspace(-15, 15)
+    colors = ['b','g','r','c', 'm','y', 'bisque', 'olivedrab']
+    for coef, intercept, color in zip(lr.coef_, lr.intercept_, colors[:n_classes]):
+        plt.plot(line, -(line * coef[0] + intercept) / coef[1], c=color)
+    plt.ylim(-10, 15)
+    plt.xlim(-10, 8)
+    plt.xlabel("Feature 0")
+    plt.ylabel("Feature 1")
+    legend_labels = []
+    for cl in range(n_classes):
+        legend_labels.append("Class " + str(cl))
+    for cl in range(n_classes):
+        legend_labels.append("Line class " + str(cl))
+    plt.legend(
+        legend_labels,
+        loc=(1.01, 0.3),
+    );
+    if test_points:
+        for test_point in test_points: 
+            plt.plot(test_point[0], test_point[1], "k*", markersize=16)
+    if decision_boundary:
+        mglearn.plots.plot_2d_classification(lr, X_train, fill=True, alpha=0.7)
